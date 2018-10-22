@@ -1,19 +1,40 @@
 <html>
 <head>
     <title>Input Data</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  <form method="POST" action="post.php">
-    Id : <input type="text" name="id" /><br />
-    Nama : <input type="text" name="username" /><br />
-    Password : <input type="text" name="pass" /><br />
-    <tr><td>Level</td><td>
-                        <input type="radio" name="level" value="admin">Admin
-                        <input type="radio" name="level" value="user">User
-                        <input type="radio" name="level" value="guest">Guest
-                    </td></tr><br/>
-    Full Name : <input type="text" name="fullname" /><br />
-    <input type="submit" value="Daftar" name="daftar" />
-  </form>
+  <section id="input-form">
+		<form method="POST" action="post.php">
+			<div class="form">
+				<label>Id</label>
+				<input type="text" name="id"
+			</div>
+			<div class="form">
+				<label>Username</label>
+				<input type="text" name="username">
+			</div>
+			<div class="form">
+				<label>Password</label>
+				<input type="text" name="pass">
+			</div>
+			<div class="form">
+				<label>Full Name</label>
+				<input type="text" name="fullname">
+			</div>
+			<div class="form">
+				<label>Level</label>
+				<select name="level">
+					<option value="">-- pilih level --</option>
+					<option value="admin">Admin</option>
+					<option value="guest">Guest</option>
+					<option value="user">User</option>
+				</select>
+			</div>
+			<div class="form">
+				<input type="submit" name="daftar" value="Daftar" class="bg-blue">
+			</div>
+		</form>
+	</selection>
 </body>
 </html>

@@ -1,3 +1,8 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="style/table.css">
+    </head>
+    <body>
 <?php
 include "config.php";
 $query = mysqli_query($connection,"SELECT * FROM user ORDER BY id DESC");
@@ -27,3 +32,5 @@ $query = mysqli_query($connection,"SELECT * FROM user ORDER BY id DESC");
         <?php } ?>
     </table>
 </form>
+            </body>
+</html>
