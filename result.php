@@ -5,7 +5,7 @@
     <body>
 <?php
 include "config.php";
-$query = mysqli_query($connection,"SELECT * FROM user ORDER BY id DESC");
+$query = mysqli_query($connection,"SELECT * FROM user ORDER BY id ASC");
 ?>
 <form action="" method="post">
     <table border="1" cellpadding="0" cellspacing="0">
@@ -15,6 +15,7 @@ $query = mysqli_query($connection,"SELECT * FROM user ORDER BY id DESC");
             <th>Password</th>
             <th>Full Name</th>
             <th>Level</th>
+            <th>Action</th>
         </tr>
         <?php if(mysqli_num_rows($query)>0){ ?>
         <?php
@@ -27,6 +28,10 @@ $query = mysqli_query($connection,"SELECT * FROM user ORDER BY id DESC");
             <td><?php echo $data["password"];?></td>
             <td><?php echo $data["fullname"];?></td>
             <td><?php echo $data["level"];?></td>
+            <td>
+            <a href="edit.php?id=<?php echo $data['id']; ?>">Update</a>
+	        <a href="hapus.php?id=<?php echo $data['id']; ?>">Hapus</a>
+            </td>
         </tr>
         <?php $no++; } ?>
         <?php } ?>
